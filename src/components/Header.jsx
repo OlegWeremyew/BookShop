@@ -9,7 +9,11 @@ const Header = ({handleCart, orderLen}) => {
                 <Typography
                     variant="h6"
                     component="span"
-                    sx={{flexGrow: 1}}
+                    sx={{
+                        flexGrow: 1,
+                        fontFamily: 'Fredoka',
+                        fontWeight: 600,
+                    }}
                 >
                     My Shop
                 </Typography>
