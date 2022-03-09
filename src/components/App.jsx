@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
 import BasketList from './BasketList';
 import GoodsList from './GoodsList';
 import Search from './Search';
 
-import { goods } from '../data/goods';
+import {goods} from '../data/goods';
+import Header from "./Header";
+import {Container} from "@material-ui/core";
 
 const App = () => {
     const [order, setOrder] = useState([]);
@@ -65,8 +67,13 @@ const App = () => {
     };
 
     return (
-        <div className='App'>
-            <div className='container'>
+        <>
+            <Header/>
+            <Container
+            sx={{
+                mt: '1rem'
+            }}
+            >
                 <Search
                     value={search}
                     onChange={handleChange}
@@ -79,8 +86,8 @@ const App = () => {
                     order={order}
                     setOrder={removeFromOrder}
                 />
-            </div>
-        </div>
+            </Container>
+        </>
     );
 }
 
