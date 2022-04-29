@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bdab7bb9-ba22-4dba-a346-170f5fc29b07" name="Changes" comment="completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BasketList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/goods.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646814032797</updated>
       <workItem from="1646814034056" duration="9392000" />
+      <workItem from="1651255971145" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="added MU Components">
       <created>1646817438763</created>
@@ -118,10 +117,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added MU Components" />
     <MESSAGE value="completed" />
     <option name="LAST_COMMIT_MESSAGE" value="completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/data/goods.js</url>
+          <line>79</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -83,4 +83,40 @@ export const goods = [
         poster: "https://images.unsplash.com/photo-1593754500338-969a679d5ca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
         price: 1550,
     },
+    {
+        id: 'sticker04',
+        category: 'stickers',
+        name: 'Набор наклеек Animals',
+        poster: "https://images.wbstatic.net/big/new/14930000/14939717-1.jpg",
+        price: 950,
+    },
+    {
+        id: 'sticker05',
+        category: 'stickers',
+        name: 'Набор наклеек Birds',
+        poster: "https://ae04.alicdn.com/kf/Hbb62bb82022b476db17986222d130befe/50-100-Angry-Bird.jpg",
+        price: 1070,
+    },
+    {
+        id: 'sticker06',
+        category: 'stickers',
+        name: 'Набор наклеек Bugs',
+        poster: "https://ae04.alicdn.com/kf/H7e35eaf560fd4282ab15b72aed54778cU/50.jpg",
+        price: 475,
+    },
+    {
+        id: 'AgataKristy',
+        category: 'detectives01',
+        name: 'Печальный кепарис',
+        poster: "https://cv3.litres.ru/pub/c/elektronnaya-kniga/cover_415/56080435-agata-kristi-pechalnyy-kiparis-56080435.jpg",
+        price: 835,
+    },
+    {
+        id: 'AgataKristy',
+        category: 'detectives02',
+        name: 'Спящий убийца',
+        poster: "https://cv8.litres.ru/pub/c/audiokniga/cover_415/65397586-agata-kristi-spyaschiy-ubiyca-65397586.jpg",
+        price: 1200,
+    },
+
 ];
