@@ -118,5 +118,33 @@ export const goods = [
         poster: "https://cv8.litres.ru/pub/c/audiokniga/cover_415/65397586-agata-kristi-spyaschiy-ubiyca-65397586.jpg",
         price: 1200,
     },
+    {
+        id: 'AgataKristy',
+        category: 'detectives03',
+        name: 'Труп в библиотеке',
+        poster: "https://s3-goods.ozstatic.by/1000/854/61/101/101061854_0.jpg",
+        price: 900,
+    },
+    {
+        id: 'GeorgeMartin',
+        category: 'fantasyAndHistorical01',
+        name: 'Сборник книг',
+        poster: "https://img.labirint.ru/images/att/news/1-17637-1504101837-2516.jpg",
+        price: 1900,
+    },
+    {
+        id: 'science01',
+        category: 'kidsBook',
+        name: 'Детская книга про динозавров',
+        poster: "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/170947/lqOrmXUMovjRGcAILvxvXA.jpg",
+        price: 350,
+    },
+    {
+        id: ' ErnestMillerHemingway01',
+        category: 'kidsBook',
+        name: 'Старик и море',
+        poster: "https://briefly.ru/static/cache/illustrations/720/8.jpeg?1579589779",
+        price: 850,
+    },
 
 ];
