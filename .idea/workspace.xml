@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdab7bb9-ba22-4dba-a346-170f5fc29b07" name="Changes" comment="completed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/goods.js" afterDir="false" />
-    </list>
+    <list default="true" id="bdab7bb9-ba22-4dba-a346-170f5fc29b07" name="Changes" comment="added new books" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +83,7 @@
       <updated>1646814032797</updated>
       <workItem from="1646814034056" duration="9392000" />
       <workItem from="1651255971145" duration="981000" />
-      <workItem from="1651299074012" duration="324000" />
+      <workItem from="1651299074012" duration="606000" />
     </task>
     <task id="LOCAL-00001" summary="added MU Components">
       <created>1646817438763</created>
@@ -109,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651256956384</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added new books">
+      <created>1651299673956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651299673956</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +134,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added MU Components" />
     <MESSAGE value="completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed" />
+    <MESSAGE value="added new books" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new books" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
