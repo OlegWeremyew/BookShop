@@ -11,7 +11,7 @@ const Search = (props) => {
         value={value}
         onChange={onChange}
         sx={{
-        mb: '1.5rem'
+            mb: '1.5rem'
         }}
     />;
 };

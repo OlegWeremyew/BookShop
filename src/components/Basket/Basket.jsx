@@ -1,7 +1,7 @@
 import React from 'react';
 import {Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography} from "@material-ui/core";
 import {ShoppingBasket} from "@material-ui/icons";
-import BasketItem from "./BasketItem";
+import BasketItem from "./BasketItem/BasketItem";
 
 const Basket = (props) => {
 

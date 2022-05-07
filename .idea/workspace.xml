@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdab7bb9-ba22-4dba-a346-170f5fc29b07" name="Changes" comment="added new books" />
+    <list default="true" id="bdab7bb9-ba22-4dba-a346-170f5fc29b07" name="Changes" comment="refactoring">
+      <change afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Basket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Basket/Basket.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BasketItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Basket/BasketItem/BasketItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoodsItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsItem/GoodsItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoodsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Snack.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Snack/Snack.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/goods.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -36,12 +49,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyWayTypeScript" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\mui-shop-project\src\components\Snack" />
+      <recent name="D:\GitHub\mui-shop-project\src\components\Search" />
+      <recent name="D:\GitHub\mui-shop-project\src\components\Header" />
+      <recent name="D:\GitHub\mui-shop-project\src\components\GoodsList" />
+      <recent name="D:\GitHub\mui-shop-project\src\components\Basket\BasketItem" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -84,6 +107,8 @@
       <workItem from="1646814034056" duration="9392000" />
       <workItem from="1651255971145" duration="981000" />
       <workItem from="1651299074012" duration="606000" />
+      <workItem from="1651870529785" duration="47000" />
+      <workItem from="1651942897371" duration="1108000" />
     </task>
     <task id="LOCAL-00001" summary="added MU Components">
       <created>1646817438763</created>
@@ -113,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651299673956</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="space">
+      <created>1651870556796</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651870556796</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +167,9 @@
     <MESSAGE value="added MU Components" />
     <MESSAGE value="completed" />
     <MESSAGE value="added new books" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new books" />
+    <MESSAGE value="space" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

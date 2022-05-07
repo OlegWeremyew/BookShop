@@ -45,8 +45,7 @@ const GoodsItem = (props) => {
                 </CardActions>
             </Card>
         </Grid>
-    )
-        ;
+    );
 };
 
 export default GoodsItem;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GoodsItem from './GoodsItem';
+import GoodsItem from './GoodsItem/GoodsItem';
 import {Grid} from "@material-ui/core";
 
 const GoodsList = (props) => {

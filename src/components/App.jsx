@@ -1,17 +1,18 @@
 import {useState} from 'react';
 
-import GoodsList from './GoodsList';
-import Search from './Search';
+import GoodsList from './GoodsList/GoodsList';
+import Search from './Search/Search';
 
 import {goods} from '../data/goods';
-import Header from "./Header";
+import Header from "./Header/Header";
 import {Container} from "@material-ui/core";
-import Basket from "./Basket";
-import Snack from "./Snack";
+import Basket from "./Basket/Basket";
+import Snack from "./Snack/Snack";
+import {EMPTY_STRING} from "../constants";
 
 const App = () => {
     const [order, setOrder] = useState([]);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState(EMPTY_STRING);
     const [products, setProducts] = useState(goods);
     const [isCartOpen, setCartOpen] = useState(false);
     const [isSnackOpen, setSnackOpen] = useState(false);
@@ -19,7 +20,7 @@ const App = () => {
     const handleChange = (e) => {
         if (!e.target.value) {
             setProducts(goods);
-            setSearch('');
+            setSearch(EMPTY_STRING);
             return;
         }
 
