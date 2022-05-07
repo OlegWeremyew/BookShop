@@ -1,12 +1,10 @@
 import React from 'react';
 import {Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography} from "@material-ui/core";
 import {ShoppingBasket} from "@material-ui/icons";
-import BasketItem from "./BasketItem/BasketItem";
+import {BasketItem} from "./BasketItem";
+import {BasketPropsType} from "./types";
 
-const Basket = (props) => {
-
-    const {cartOpen, closeCart = Function.prototype, order = [], removeFromOrder} = props
-
+export const Basket:React.FC<BasketPropsType> = ({cartOpen, closeCart = Function.prototype, order = [], removeFromOrder}) => {
     return (
         <Drawer
             anchor='right'
@@ -53,5 +51,3 @@ const Basket = (props) => {
         </Drawer>
     );
 };
-
-export default Basket;

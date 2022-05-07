@@ -1,8 +1,9 @@
 import React from 'react';
 import {AppBar, Badge, IconButton, Toolbar, Typography} from "@material-ui/core";
 import {ShoppingBasket} from "@material-ui/icons";
+import {HeaderPropsType} from "./types";
 
-const Header = ({handleCart, orderLen}) => {
+export const Header: React.FC<HeaderPropsType> = ({handleCart, orderLen}) => {
     return (
         <AppBar position={'static'}>
             <Toolbar>
@@ -17,14 +18,8 @@ const Header = ({handleCart, orderLen}) => {
                 >
                     My Shop
                 </Typography>
-                <IconButton
-                    color="inherit"
-                    onClick={handleCart}
-                >
-                    <Badge
-                        color='secondary'
-                        badgeContent={orderLen}
-                    >
+                <IconButton color="inherit" onClick={handleCart}>
+                    <Badge color='secondary' badgeContent={orderLen}>
                         <ShoppingBasket/>
                     </Badge>
                 </IconButton>
@@ -32,5 +27,3 @@ const Header = ({handleCart, orderLen}) => {
         </AppBar>
     );
 };
-
-export default Header;

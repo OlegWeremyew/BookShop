@@ -1,9 +1,8 @@
 import React from 'react';
 import {Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from "@material-ui/core";
+import {GoodsItemPropsType} from "./types";
 
-const GoodsItem = (props) => {
-    const {name, price, setOrder, poster} = props;
-
+export const GoodsItem:React.FC<GoodsItemPropsType> = ({name, price, setOrder, poster, id}) => {
     return (
         <Grid item xs={12} md={4}>
             <Card
@@ -34,9 +33,9 @@ const GoodsItem = (props) => {
                         variant='text'
                         onClick={() =>
                             setOrder({
-                                id: props.id,
-                                name: props.name,
-                                price: props.price,
+                                id: id,
+                                name: name,
+                                price: price,
                             })
                         }
                     >
@@ -47,5 +46,3 @@ const GoodsItem = (props) => {
         </Grid>
     );
 };
-
-export default GoodsItem;

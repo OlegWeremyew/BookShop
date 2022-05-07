@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import App from './components/App';
 import {createTheme, ThemeProvider} from "@material-ui/core";
+import {App} from "./components";
 
 const theme = createTheme({
     palette: {

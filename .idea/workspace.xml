@@ -2,17 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdab7bb9-ba22-4dba-a346-170f5fc29b07" name="Changes" comment="refactoring">
-      <change afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Basket/BasketItem/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Basket/BasketItem/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Basket/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Basket/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsItem/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsItem/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GoodsList/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GoodsList/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Snack/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Snack/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Basket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Basket/Basket.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BasketItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Basket/BasketItem/BasketItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GoodsItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsItem/GoodsItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GoodsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Snack.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Snack/Snack.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/goods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Basket/Basket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Basket/Basket.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Basket/BasketItem/BasketItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Basket/BasketItem/BasketItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoodsList/GoodsItem/GoodsItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsItem/GoodsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoodsList/GoodsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoodsList/GoodsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Snack/Snack.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Snack/Snack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/goods.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +69,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyWayTypeScript" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Basket/BasketItem" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\GitHub\mui-shop-project\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\mui-shop-project\src\components\Basket\BasketItem" />
+      <recent name="D:\GitHub\mui-shop-project\src\components\Basket\types" />
+      <recent name="D:\GitHub\mui-shop-project\src\components\GoodsList\GoodsItem\types" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\mui-shop-project\src\components\Snack" />
       <recent name="D:\GitHub\mui-shop-project\src\components\Search" />
@@ -108,7 +134,8 @@
       <workItem from="1651255971145" duration="981000" />
       <workItem from="1651299074012" duration="606000" />
       <workItem from="1651870529785" duration="47000" />
-      <workItem from="1651942897371" duration="1108000" />
+      <workItem from="1651942897371" duration="1145000" />
+      <workItem from="1651944079831" duration="4748000" />
     </task>
     <task id="LOCAL-00001" summary="added MU Components">
       <created>1646817438763</created>
@@ -145,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651870556796</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactoring">
+      <created>1651944027545</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651944027545</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,9 +209,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data/goods.js</url>
-          <line>79</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/components/Basket/types/index.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

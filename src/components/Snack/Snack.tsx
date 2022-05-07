@@ -1,7 +1,8 @@
 import React from 'react';
 import {Alert, Snackbar} from "@material-ui/core";
+import {SnackPropsType} from "./types";
 
-const Snack = ({isOpen, handleClose}) => {
+export const Snack:React.FC<SnackPropsType> = ({isOpen, handleClose}) => {
     return (
         <Snackbar
             open={isOpen}
@@ -14,5 +15,3 @@ const Snack = ({isOpen, handleClose}) => {
         </Snackbar>
     );
 };
-
-export default Snack;

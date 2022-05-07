@@ -1,4 +1,4 @@
-export const goods = [
+export const goods: GoodsType[] = [
     {
         id: 'js01',
         category: 'books',
@@ -146,5 +146,12 @@ export const goods = [
         poster: "https://briefly.ru/static/cache/illustrations/720/8.jpeg?1579589779",
         price: 850,
     },
-
 ];
+
+export type GoodsType = {
+    id: string
+    category: string
+    name: string
+    poster: string
+    price: number
+}
