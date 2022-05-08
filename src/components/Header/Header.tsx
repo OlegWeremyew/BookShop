@@ -2,8 +2,9 @@ import React from 'react';
 import {AppBar, Badge, IconButton, Toolbar, Typography} from "@material-ui/core";
 import {ShoppingBasket} from "@material-ui/icons";
 import {HeaderPropsType} from "./types";
+import {ReturnComponentType} from "../../types/ReturnComponentType";
 
-export const Header: React.FC<HeaderPropsType> = ({handleCart, orderLen}) => {
+export const Header: React.FC<HeaderPropsType> = ({handleCart, orderLen}): ReturnComponentType => {
     return (
         <AppBar position={'static'}>
             <Toolbar>

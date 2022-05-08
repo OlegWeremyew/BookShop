@@ -1,8 +1,9 @@
 import {TextField} from "@material-ui/core";
 import React from "react";
 import {SearchPropsType} from "./types";
+import {ReturnComponentType} from "../../../types/ReturnComponentType";
 
-export const Search: React.FC<SearchPropsType> = ({value, handleChange}) => {
+export const Search: React.FC<SearchPropsType> = ({value, handleChange}): ReturnComponentType => {
     return (
         <TextField
             label='search'

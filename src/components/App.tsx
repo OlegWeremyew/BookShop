@@ -1,16 +1,16 @@
 import {ChangeEvent, useState} from 'react';
 import {goods, GoodsType} from '../data/goods';
-import {Container} from "@material-ui/core";
-import {EMPTY_STRING} from "../constants";
+import {EMPTY_ARRAY, EMPTY_STRING} from "../constants";
 import {OrderType} from "./types";
-import {Search} from "./Search";
 import {Snack} from "./Snack";
 import {Header} from "./Header";
-import {GoodsList} from "./GoodsList";
 import {Basket} from "./Basket";
+import {ReturnComponentType} from "../types/ReturnComponentType";
+import {SearchBlock} from "./SearchBlock";
 
-export const App = () => {
-    const [order, setOrder] = useState<OrderType[]>([]);
+export const App = (): ReturnComponentType => {
+
+    const [order, setOrder] = useState<OrderType[]>(EMPTY_ARRAY);
     const [search, setSearch] = useState<string>(EMPTY_STRING);
     const [products, setProducts] = useState<GoodsType[]>(goods);
     const [isCartOpen, setCartOpen] = useState<boolean>(false);
@@ -60,9 +60,7 @@ export const App = () => {
                 ],
             );
         }
-
         setSnackOpen(true)
-
     };
 
     const removeFromOrder = (goodsItem: string) => {
@@ -76,16 +74,12 @@ export const App = () => {
                     handleCart={() => setCartOpen(true)}
                     orderLen={order.length}
                 />
-                <Container sx={{mt: '1rem',}}>
-                    <Search
-                        value={search}
-                        handleChange={handleChange}
-                    />
-                    <GoodsList
-                        products={products}
-                        setOrder={addToOrder}
-                    />
-                </Container>
+                <SearchBlock
+                    search={search}
+                    handleChange={handleChange}
+                    products={products}
+                    addToOrder={addToOrder}
+                />
                 <Basket
                     order={order}
                     removeFromOrder={removeFromOrder}
