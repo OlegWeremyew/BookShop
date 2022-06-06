@@ -9,6 +9,7 @@ import { SearchBlock } from './SearchBlock';
 import { GoodsType } from '../data/types';
 import { goods } from '../data';
 import styles from './App.module.css';
+import { Control } from './Control';
 
 export const App = (): ReturnComponentType => {
   const [order, setOrder] = useState<OrderType[]>(EMPTY_ARRAY);
@@ -85,6 +86,7 @@ export const App = (): ReturnComponentType => {
         />
         <Snack isOpen={isSnackOpen} handleClose={() => setSnackOpen(false)} />
       </div>
+      <Control />
     </div>
   );
 };

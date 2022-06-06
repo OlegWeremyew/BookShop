@@ -1,0 +1,17 @@
+.containerSelector {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+    color: #986c34;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+}
