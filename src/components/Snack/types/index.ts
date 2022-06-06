@@ -1,4 +1,4 @@
 export type SnackPropsType = {
-    isOpen: boolean
-    handleClose: () => void
-}
+  isOpen: boolean;
+  handleClose: () => void;
+};

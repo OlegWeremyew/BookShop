@@ -1,1 +1,1 @@
-export {BasketItem} from './BasketItem'
+export { BasketItem } from './BasketItem';

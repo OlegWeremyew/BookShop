@@ -1,6 +1,6 @@
-import {ChangeEvent} from "react";
+import { ChangeEvent } from 'react';
 
 export type SearchPropsType = {
-    value: string
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void
-}
+  value: string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+};

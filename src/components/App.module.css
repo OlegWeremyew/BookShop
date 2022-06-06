@@ -1,0 +1,8 @@
+.appWrapper {
+    background-color: #e8ded5;
+    min-height: 100vh;
+}
+
+.mainContent {
+    padding-bottom: 40px;
+}

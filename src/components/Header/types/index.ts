@@ -1,4 +1,4 @@
 export type HeaderPropsType = {
-    orderLen: number
-    handleCart: ()=>void
-}
+  orderLen: number;
+  handleCart: () => void;
+};

@@ -1,1 +1,1 @@
-export {GoodsList} from './GoodsList'
+export { GoodsList } from './GoodsList';
