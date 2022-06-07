@@ -7,18 +7,13 @@ import { Basket } from './Basket';
 import { ReturnComponentType } from '../types/ReturnComponentType';
 import { SearchBlock } from './SearchBlock';
 import styles from './App.module.css';
-import { Control } from './Control';
 import { goods } from '../redux/appReducer/data';
 import { useSelector } from 'react-redux';
-import {
-  getAllBooksAppSelector,
-  getBasketCurrentValueAppSelector,
-} from '../selectors/appSelectors';
+import { getAllBooksAppSelector } from '../selectors/appSelectors';
 
 export const App = (): ReturnComponentType => {
   const bookList = useSelector(getAllBooksAppSelector);
-  const basketList = useSelector(getBasketCurrentValueAppSelector);
-  const [order, setOrder] = useState<OrderType[]>(basketList);
+  const [order, setOrder] = useState<OrderType[]>([]);
   const [search, setSearch] = useState<string>(EMPTY_STRING);
   const [products, setProducts] = useState(bookList);
   const [isCartOpen, setCartOpen] = useState<boolean>(false);
@@ -92,7 +87,6 @@ export const App = (): ReturnComponentType => {
         />
         <Snack isOpen={isSnackOpen} handleClose={() => setSnackOpen(false)} />
       </div>
-      <Control />
     </div>
   );
 };
