@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 import { OrderType } from '../../types';
-import { GoodsType } from '../../../data/types';
+import { GoodsType } from '../../../redux/appReducer/data/types';
 
 export type SearchBlockPropsType = {
   search: string;

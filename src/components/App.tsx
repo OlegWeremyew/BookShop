@@ -1,20 +1,26 @@
 import { ChangeEvent, useState } from 'react';
-import { EMPTY_ARRAY, EMPTY_STRING } from '../constants';
+import { EMPTY_STRING } from '../constants';
 import { OrderType } from './types';
 import { Snack } from './Snack';
 import { Header } from './Header';
 import { Basket } from './Basket';
 import { ReturnComponentType } from '../types/ReturnComponentType';
 import { SearchBlock } from './SearchBlock';
-import { GoodsType } from '../data/types';
-import { goods } from '../data';
 import styles from './App.module.css';
 import { Control } from './Control';
+import { goods } from '../redux/appReducer/data';
+import { useSelector } from 'react-redux';
+import {
+  getAllBooksAppSelector,
+  getBasketCurrentValueAppSelector,
+} from '../selectors/appSelectors';
 
 export const App = (): ReturnComponentType => {
-  const [order, setOrder] = useState<OrderType[]>(EMPTY_ARRAY);
+  const bookList = useSelector(getAllBooksAppSelector);
+  const basketList = useSelector(getBasketCurrentValueAppSelector);
+  const [order, setOrder] = useState<OrderType[]>(basketList);
   const [search, setSearch] = useState<string>(EMPTY_STRING);
-  const [products, setProducts] = useState<GoodsType[]>(goods);
+  const [products, setProducts] = useState(bookList);
   const [isCartOpen, setCartOpen] = useState<boolean>(false);
   const [isSnackOpen, setSnackOpen] = useState<boolean>(false);
 
