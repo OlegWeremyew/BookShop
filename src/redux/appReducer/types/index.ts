@@ -1,11 +1,11 @@
 import { GoodsType } from '../data/types';
 import { InferActionTypes } from '../../types';
 import { appAction } from '../appAction';
-import { OrderType } from '../../../components/types';
 
 export type InitialAppStateType = {
   books: GoodsType[];
-  order: OrderType[];
+  search: string;
+  searchList: GoodsType[];
 };
 
 export type ActionAppReducerType = InferActionTypes<typeof appAction>;

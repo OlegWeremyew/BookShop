@@ -7,28 +7,36 @@ import { Basket } from './Basket';
 import { ReturnComponentType } from '../types/ReturnComponentType';
 import { SearchBlock } from './SearchBlock';
 import styles from './App.module.css';
-import { goods } from '../redux/appReducer/data';
-import { useSelector } from 'react-redux';
-import { getAllBooksAppSelector } from '../selectors/appSelectors';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  getAllBooksAppSelector,
+  getSearchListAppSelector,
+  getSearchValueAppSelector,
+} from '../selectors/appSelectors';
+import { appAction } from '../redux/appReducer';
 
 export const App = (): ReturnComponentType => {
+  const dispatch = useDispatch();
+
   const bookList = useSelector(getAllBooksAppSelector);
+  const searchList = useSelector(getSearchListAppSelector);
+  const search = useSelector(getSearchValueAppSelector);
   const [order, setOrder] = useState<OrderType[]>([]);
-  const [search, setSearch] = useState<string>(EMPTY_STRING);
-  const [products, setProducts] = useState(bookList);
   const [isCartOpen, setCartOpen] = useState<boolean>(false);
   const [isSnackOpen, setSnackOpen] = useState<boolean>(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     if (!e.target.value) {
-      setProducts(goods);
-      setSearch(EMPTY_STRING);
+      dispatch(appAction.setSearchList(bookList));
+      dispatch(appAction.setFilterValue(EMPTY_STRING));
       return;
     }
-    setSearch(e.target.value);
-    setProducts(
-      products.filter(good =>
-        good.name.toLowerCase().includes(e.target.value.toLowerCase()),
+    dispatch(appAction.setFilterValue(e.target.value));
+    dispatch(
+      appAction.setSearchList(
+        searchList.filter(good =>
+          good.name.toLowerCase().includes(e.target.value.toLowerCase()),
+        ),
       ),
     );
   };
@@ -76,7 +84,7 @@ export const App = (): ReturnComponentType => {
         <SearchBlock
           search={search}
           handleChange={handleChange}
-          products={products}
+          products={searchList}
           addToOrder={addToOrder}
         />
         <Basket
