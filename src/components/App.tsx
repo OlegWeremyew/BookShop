@@ -10,6 +10,7 @@ import styles from './App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getAllBooksAppSelector,
+  getBasketListAppSelector,
   getSearchListAppSelector,
   getSearchValueAppSelector,
 } from '../selectors/appSelectors';
@@ -21,7 +22,8 @@ export const App = (): ReturnComponentType => {
   const bookList = useSelector(getAllBooksAppSelector);
   const searchList = useSelector(getSearchListAppSelector);
   const search = useSelector(getSearchValueAppSelector);
-  const [order, setOrder] = useState<OrderType[]>([]);
+  const basketList = useSelector(getBasketListAppSelector);
+
   const [isCartOpen, setCartOpen] = useState<boolean>(false);
   const [isSnackOpen, setSnackOpen] = useState<boolean>(false);
 
@@ -43,44 +45,44 @@ export const App = (): ReturnComponentType => {
 
   const addToOrder = (goodsItem: OrderType): void => {
     let quantity = 1;
-    const indexInOrder = order.findIndex(item => item.id === goodsItem.id);
+    const indexInOrder = basketList.findIndex(item => item.id === goodsItem.id);
 
     if (indexInOrder > -1) {
-      quantity = order[indexInOrder].quantity + 1;
-      setOrder(
-        order.map(item => {
-          if (item.id !== goodsItem.id) return item;
+      quantity = basketList[indexInOrder].quantity + 1;
+      const orderList = basketList.map(item => {
+        if (item.id !== goodsItem.id) return item;
 
-          return {
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            quantity,
-          };
-        }),
-      );
+        return {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity,
+        };
+      });
+      dispatch(appAction.addBookInBasketList(orderList));
     } else {
-      setOrder([
-        ...order,
+      const orderList = [
+        ...basketList,
         {
           id: goodsItem.id,
           name: goodsItem.name,
           price: goodsItem.price,
           quantity,
         },
-      ]);
+      ];
+      dispatch(appAction.addBookInBasketList(orderList));
     }
     setSnackOpen(true);
   };
 
   const removeFromOrder = (goodsItem: string): void => {
-    setOrder(order.filter(item => item.id !== goodsItem));
+    dispatch(appAction.deleteBookFromBasketList(goodsItem));
   };
 
   return (
     <div className={styles.appWrapper}>
       <div className={styles.mainContent}>
-        <Header handleCart={() => setCartOpen(true)} orderLen={order.length} />
+        <Header handleCart={() => setCartOpen(true)} orderLen={basketList.length} />
         <SearchBlock
           search={search}
           handleChange={handleChange}
@@ -88,7 +90,7 @@ export const App = (): ReturnComponentType => {
           addToOrder={addToOrder}
         />
         <Basket
-          order={order}
+          order={basketList}
           removeFromOrder={removeFromOrder}
           cartOpen={isCartOpen}
           closeCart={() => setCartOpen(false)}
