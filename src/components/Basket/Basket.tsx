@@ -2,13 +2,14 @@ import React from 'react';
 import {
   Divider,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
 } from '@material-ui/core';
-import { ShoppingBasket } from '@material-ui/icons';
+import { Delete, ShoppingBasket } from '@material-ui/icons';
 import { BasketItem } from './BasketItem';
 import { BasketPropsType } from './types';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
@@ -19,6 +20,7 @@ export const Basket: React.FC<BasketPropsType> = ({
   closeCart = Function.prototype,
   order = EMPTY_ARRAY,
   removeFromOrder,
+  cleanOrderList,
 }): ReturnComponentType => (
   <Drawer anchor="right" open={cartOpen} onClose={closeCart}>
     <List sx={{ width: '400px' }}>
@@ -27,6 +29,10 @@ export const Basket: React.FC<BasketPropsType> = ({
           <ShoppingBasket />
         </ListItemIcon>
         <ListItemText primary="Корзина" />
+        <Typography>Очистить корзину</Typography>
+        <IconButton onClick={cleanOrderList}>
+          <Delete />
+        </IconButton>
       </ListItem>
       <Divider />
 

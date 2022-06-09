@@ -79,6 +79,10 @@ export const App = (): ReturnComponentType => {
     dispatch(appAction.deleteBookFromBasketList(goodsItem));
   };
 
+  const cleanOrderList = (): void => {
+    dispatch(appAction.cleanBasketList());
+  };
+
   return (
     <div className={styles.appWrapper}>
       <div className={styles.mainContent}>
@@ -91,6 +95,7 @@ export const App = (): ReturnComponentType => {
         />
         <Basket
           order={basketList}
+          cleanOrderList={cleanOrderList}
           removeFromOrder={removeFromOrder}
           cartOpen={isCartOpen}
           closeCart={() => setCartOpen(false)}

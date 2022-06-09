@@ -1,7 +1,8 @@
-import { InitialAppStateType } from '../types';
+import { ActionAppReducerType, InitialAppStateType } from '../types';
 import { goods } from '../data';
 import {
   ADD_BOOK_IN_BASKET_LIST,
+  CLEAN_BASKET_LIST,
   DELETE_BOOK_FROM_BASKET_LIST,
   SET_FILTER_VALUE,
   SET_SEARCH_LIST,
@@ -18,7 +19,7 @@ export const initialAppState = {
 
 export const appReducer = (
   state: InitialAppStateType = initialAppState,
-  action: any,
+  action: ActionAppReducerType,
 ): InitialAppStateType => {
   switch (action.type) {
     case SET_FILTER_VALUE: {
@@ -43,6 +44,12 @@ export const appReducer = (
       return {
         ...state,
         basket: state.basket.filter(item => item.id !== action.payload.bookID),
+      };
+    }
+    case CLEAN_BASKET_LIST: {
+      return {
+        ...state,
+        basket: [],
       };
     }
     default:

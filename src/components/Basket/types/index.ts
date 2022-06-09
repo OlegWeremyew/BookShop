@@ -5,4 +5,5 @@ export type BasketPropsType = {
   closeCart: any;
   order: OrderType[];
   removeFromOrder: (goodsItem: string) => void;
+  cleanOrderList: () => void;
 };
