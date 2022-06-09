@@ -1,0 +1,23 @@
+.item {
+
+  height: 100%;
+
+  &:hover {
+    opacity: 0.9;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 18px rgba(18, 18, 19, 0.35);
+
+    .cardContent {
+      .name {
+        color: #831717;
+        cursor: default;
+      }
+
+      .price {
+        font-weight: 500;
+        cursor: default;
+      }
+    }
+  }
+}
+

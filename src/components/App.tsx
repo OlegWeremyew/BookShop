@@ -10,11 +10,11 @@ import styles from './App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getAllBooksAppSelector,
-  getBasketListAppSelector,
   getSearchListAppSelector,
   getSearchValueAppSelector,
 } from '../selectors/appSelectors';
 import { appAction } from '../redux/appReducer';
+import { useGetHistoryList } from '../utils';
 
 export const App = (): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export const App = (): ReturnComponentType => {
   const bookList = useSelector(getAllBooksAppSelector);
   const searchList = useSelector(getSearchListAppSelector);
   const search = useSelector(getSearchValueAppSelector);
-  const basketList = useSelector(getBasketListAppSelector);
+  const basketList = useGetHistoryList();
 
   const [isCartOpen, setCartOpen] = useState<boolean>(false);
   const [isSnackOpen, setSnackOpen] = useState<boolean>(false);
@@ -33,14 +33,11 @@ export const App = (): ReturnComponentType => {
       dispatch(appAction.setFilterValue(EMPTY_STRING));
       return;
     }
-    dispatch(appAction.setFilterValue(e.target.value));
-    dispatch(
-      appAction.setSearchList(
-        searchList.filter(good =>
-          good.name.toLowerCase().includes(e.target.value.toLowerCase()),
-        ),
-      ),
+    const newBookList = searchList.filter(good =>
+      good.name.toLowerCase().includes(e.target.value.toLowerCase()),
     );
+    dispatch(appAction.setFilterValue(e.target.value));
+    dispatch(appAction.setSearchList(newBookList));
   };
 
   const addToOrder = (goodsItem: OrderType): void => {

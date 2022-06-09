@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core';
 import { GoodsItemPropsType } from './types';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
+import styles from './GoodItem.module.scss';
 
 export const GoodsItem: React.FC<GoodsItemPropsType> = ({
   name,
@@ -19,7 +20,7 @@ export const GoodsItem: React.FC<GoodsItemPropsType> = ({
   id,
 }): ReturnComponentType => (
   <Grid item xs={12} md={4}>
-    <Card sx={{ height: '100%' }}>
+    <Card className={styles.item}>
       <CardMedia
         image={poster}
         component="img"
@@ -27,11 +28,13 @@ export const GoodsItem: React.FC<GoodsItemPropsType> = ({
         title={name}
         sx={{ height: 140 }}
       />
-      <CardContent>
-        <Typography variant="h6" component="h5">
+      <CardContent className={styles.cardContent}>
+        <Typography className={styles.name} variant="h6" component="h5">
           {name}
         </Typography>
-        <Typography variant="body1">Цена: {price} руб.</Typography>
+        <Typography className={styles.price} variant="body1">
+          Цена: {price} руб.
+        </Typography>
       </CardContent>
       <CardActions>
         <Button

@@ -1,8 +1,11 @@
 import {
   ADD_BOOK_IN_BASKET_LIST,
   CLEAN_BASKET_LIST,
+  DECREMENT_BOOK_QUANTITY_IN_BASKET_LIST,
   DELETE_BOOK_FROM_BASKET_LIST,
+  INCREMENT_BOOK_QUANTITY_IN_BASKET_LIST,
   SET_FILTER_VALUE,
+  SET_HISTORY_FROM_SESSION_STORAGE,
   SET_SEARCH_LIST,
 } from '../constants';
 import { GoodsType } from '../data/types';
@@ -44,6 +47,32 @@ export const appAction = {
   cleanBasketList() {
     return {
       type: CLEAN_BASKET_LIST,
+    } as const;
+  },
+  incrementBookQuantityInBasketList(bookID: string, quantityINC: number) {
+    return {
+      type: INCREMENT_BOOK_QUANTITY_IN_BASKET_LIST,
+      payload: {
+        bookID,
+        quantityINC,
+      },
+    } as const;
+  },
+  decrementBookQuantityInBasketList(bookID: string, quantityDEC: number) {
+    return {
+      type: DECREMENT_BOOK_QUANTITY_IN_BASKET_LIST,
+      payload: {
+        bookID,
+        quantityDEC,
+      },
+    } as const;
+  },
+  setHistoryFromSessionStorage(basketList: OrderType[]) {
+    return {
+      type: SET_HISTORY_FROM_SESSION_STORAGE,
+      payload: {
+        basketList,
+      },
     } as const;
   },
 };
