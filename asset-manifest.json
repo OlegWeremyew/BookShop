@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mui-shop-project/static/css/main.e6c13ad2.css",
-    "main.js": "/mui-shop-project/static/js/main.4040dd65.js",
+    "main.css": "/mui-shop-project/static/css/main.0662d827.css",
+    "main.js": "/mui-shop-project/static/js/main.cbdeaabb.js",
     "index.html": "/mui-shop-project/index.html",
-    "main.e6c13ad2.css.map": "/mui-shop-project/static/css/main.e6c13ad2.css.map",
-    "main.4040dd65.js.map": "/mui-shop-project/static/js/main.4040dd65.js.map"
+    "main.0662d827.css.map": "/mui-shop-project/static/css/main.0662d827.css.map",
+    "main.cbdeaabb.js.map": "/mui-shop-project/static/js/main.cbdeaabb.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.4040dd65.js"
+    "static/css/main.0662d827.css",
+    "static/js/main.cbdeaabb.js"
   ]
 }
