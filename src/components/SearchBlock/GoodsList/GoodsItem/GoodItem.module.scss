@@ -1,6 +1,7 @@
 .item {
-
   height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 
   &:hover {
     opacity: 0.9;

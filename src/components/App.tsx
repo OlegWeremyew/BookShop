@@ -15,6 +15,8 @@ import {
 } from '../selectors/appSelectors';
 import { appAction } from '../redux/appReducer';
 import { useGetHistoryList } from '../utils';
+import { Button } from '@material-ui/core';
+import { Home } from '@material-ui/icons';
 
 export const App = (): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -80,6 +82,10 @@ export const App = (): ReturnComponentType => {
     dispatch(appAction.cleanBasketList());
   };
 
+  const returnUp = (): void => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className={styles.appWrapper}>
       <div className={styles.mainContent}>
@@ -98,6 +104,9 @@ export const App = (): ReturnComponentType => {
           closeCart={() => setCartOpen(false)}
         />
         <Snack isOpen={isSnackOpen} handleClose={() => setSnackOpen(false)} />
+        <Button onClick={returnUp} variant="contained">
+          На верх страницы <Home style={{ color: 'white', paddingLeft: '10px' }} />
+        </Button>
       </div>
     </div>
   );
