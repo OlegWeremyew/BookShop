@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mui-shop-project/static/css/main.0662d827.css",
-    "main.js": "/mui-shop-project/static/js/main.cbdeaabb.js",
-    "index.html": "/mui-shop-project/index.html",
-    "main.0662d827.css.map": "/mui-shop-project/static/css/main.0662d827.css.map",
-    "main.cbdeaabb.js.map": "/mui-shop-project/static/js/main.cbdeaabb.js.map"
+    "main.css": "/BookShop/static/css/main.f51c94da.css",
+    "main.js": "/BookShop/static/js/main.4400fd9c.js",
+    "index.html": "/BookShop/index.html",
+    "main.f51c94da.css.map": "/BookShop/static/css/main.f51c94da.css.map",
+    "main.4400fd9c.js.map": "/BookShop/static/js/main.4400fd9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.0662d827.css",
-    "static/js/main.cbdeaabb.js"
+    "static/css/main.f51c94da.css",
+    "static/js/main.4400fd9c.js"
   ]
 }
