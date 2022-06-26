@@ -5,6 +5,21 @@
 
   .buttonGroup {
     margin-top: 10px;
+
+    @media (max-width: 420px) {
+      margin-top: 7px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .text {
+      font-size: 14px;
+    }
+
+    .button {
+      font-size: 12px;
+      padding: 6px;
+    }
   }
 
 }

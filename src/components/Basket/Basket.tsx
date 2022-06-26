@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   Divider,
   Drawer,
@@ -12,49 +12,58 @@ import {
 import { Delete, ShoppingBasket } from '@material-ui/icons';
 import { BasketItem } from './BasketItem';
 import { BasketPropsType } from './types';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
 import { EMPTY_ARRAY } from '../../constants';
+import { appAction } from '../../redux/appReducer';
+import { useDispatch } from 'react-redux';
 
-export const Basket: React.FC<BasketPropsType> = ({
+export const Basket: FC<BasketPropsType> = ({
   cartOpen,
   closeCart = Function.prototype,
   order = EMPTY_ARRAY,
-  removeFromOrder,
-  cleanOrderList,
-}): ReturnComponentType => (
-  <Drawer anchor="right" open={cartOpen} onClose={closeCart}>
-    <List sx={{ width: '400px' }}>
-      <ListItem>
-        <ListItemIcon>
-          <ShoppingBasket />
-        </ListItemIcon>
-        <ListItemText primary="Корзина" />
-        <Typography>Очистить корзину</Typography>
-        <IconButton onClick={cleanOrderList}>
-          <Delete />
-        </IconButton>
-      </ListItem>
-      <Divider />
+}) => {
+  const dispatch = useDispatch();
 
-      {!order.length ? (
-        <ListItem>Корзина пуста</ListItem>
-      ) : (
-        <>
-          {order.map(item => (
-            <BasketItem key={item.name} removeFromOrder={removeFromOrder} {...item} />
-          ))}
-          <Divider />
-          <Typography
-            sx={{
-              fontWeight: 700,
-              ml: '15px',
-            }}
-          >
-            Общая стоимость:{' '}
-            {order.reduce((acc, item) => acc + item.price * item.quantity, 0)}{' '}
-          </Typography>
-        </>
-      )}
-    </List>
-  </Drawer>
-);
+  const cleanOrderList = (): void => {
+    dispatch(appAction.cleanBasketList());
+  };
+
+  return (
+    <Drawer anchor="right" open={cartOpen} onClose={closeCart}>
+      <List>
+        <ListItem>
+          <ListItemIcon>
+            <ShoppingBasket />
+          </ListItemIcon>
+          <ListItemText primary="Корзина" />
+          <label htmlFor="empty_basket">
+            <Typography>Очистить корзину</Typography>
+          </label>
+          <IconButton id="empty_basket" onClick={cleanOrderList}>
+            <Delete />
+          </IconButton>
+        </ListItem>
+        <Divider />
+
+        {!order.length ? (
+          <ListItem>Корзина пуста</ListItem>
+        ) : (
+          <>
+            {order.map(item => (
+              <BasketItem key={item.id} {...item} />
+            ))}
+            <Divider />
+            <Typography
+              sx={{
+                fontWeight: 700,
+                ml: '15px',
+              }}
+            >
+              Общая стоимость:{' '}
+              {order.reduce((acc, item) => acc + item.price * item.quantity, 0)}{' '}
+            </Typography>
+          </>
+        )}
+      </List>
+    </Drawer>
+  );
+};

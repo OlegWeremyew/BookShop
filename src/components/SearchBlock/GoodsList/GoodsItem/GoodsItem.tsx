@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   Button,
   Card,
@@ -9,16 +9,15 @@ import {
   Typography,
 } from '@material-ui/core';
 import { GoodsItemPropsType } from './types';
-import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 import styles from './GoodItem.module.scss';
 
-export const GoodsItem: React.FC<GoodsItemPropsType> = ({
+export const GoodsItem: FC<GoodsItemPropsType> = ({
   name,
   price,
   setOrder,
   poster,
   id,
-}): ReturnComponentType => (
+}) => (
   <Grid item xs={12} md={4}>
     <Card className={styles.item}>
       <CardMedia

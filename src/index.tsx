@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 
 import ReactDOM from 'react-dom';
 
@@ -21,12 +21,12 @@ const theme = createTheme({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <App />
       </Provider>
     </ThemeProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root'),
 );

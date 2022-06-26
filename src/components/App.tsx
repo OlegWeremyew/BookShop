@@ -1,10 +1,9 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FC, useState } from 'react';
 import { EMPTY_STRING } from '../constants';
 import { OrderType } from './types';
 import { Snack } from './Snack';
 import { Header } from './Header';
 import { Basket } from './Basket';
-import { ReturnComponentType } from '../types/ReturnComponentType';
 import { SearchBlock } from './SearchBlock';
 import styles from './App.module.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,10 +14,9 @@ import {
 } from '../selectors/appSelectors';
 import { appAction } from '../redux/appReducer';
 import { useGetHistoryList } from '../utils';
-import { Button } from '@material-ui/core';
-import { Home } from '@material-ui/icons';
+import { MoveUp } from './MoveUp';
 
-export const App = (): ReturnComponentType => {
+export const App: FC = () => {
   const dispatch = useDispatch();
 
   const bookList = useSelector(getAllBooksAppSelector);
@@ -74,18 +72,6 @@ export const App = (): ReturnComponentType => {
     setSnackOpen(true);
   };
 
-  const removeFromOrder = (goodsItem: string): void => {
-    dispatch(appAction.deleteBookFromBasketList(goodsItem));
-  };
-
-  const cleanOrderList = (): void => {
-    dispatch(appAction.cleanBasketList());
-  };
-
-  const returnUp = (): void => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className={styles.appWrapper}>
       <div className={styles.mainContent}>
@@ -98,15 +84,11 @@ export const App = (): ReturnComponentType => {
         />
         <Basket
           order={basketList}
-          cleanOrderList={cleanOrderList}
-          removeFromOrder={removeFromOrder}
           cartOpen={isCartOpen}
           closeCart={() => setCartOpen(false)}
         />
         <Snack isOpen={isSnackOpen} handleClose={() => setSnackOpen(false)} />
-        <Button onClick={returnUp} variant="contained">
-          На верх страницы <Home style={{ color: 'white', paddingLeft: '10px' }} />
-        </Button>
+        <MoveUp />
       </div>
     </div>
   );
