@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import {
+  Button,
   Divider,
   Drawer,
   IconButton,
@@ -12,9 +13,10 @@ import {
 import { Delete, ShoppingBasket } from '@material-ui/icons';
 import { BasketItem } from './BasketItem';
 import { BasketPropsType } from './types';
-import { EMPTY_ARRAY } from '../../constants';
-import { appAction } from '../../redux/appReducer';
+import { EMPTY_ARRAY } from 'constants/variables';
+import { appAction } from 'redux/appReducer';
 import { useDispatch } from 'react-redux';
+import styles from './Basket.module.scss';
 
 export const Basket: FC<BasketPropsType> = ({
   cartOpen,
@@ -29,13 +31,13 @@ export const Basket: FC<BasketPropsType> = ({
 
   return (
     <Drawer anchor="right" open={cartOpen} onClose={closeCart}>
-      <List>
-        <ListItem>
-          <ListItemIcon>
-            <ShoppingBasket />
+      <List className={styles.listWrapper}>
+        <ListItem className={styles.listItem}>
+          <ListItemIcon className={styles.iconWrapper}>
+            <ShoppingBasket className={styles.icon} />
           </ListItemIcon>
-          <ListItemText primary="Корзина" />
-          <label htmlFor="empty_basket">
+          <ListItemText className={styles.trash_text} primary="Корзина" />
+          <label htmlFor="empty_basket" className={styles.label}>
             <Typography>Очистить корзину</Typography>
           </label>
           <IconButton id="empty_basket" onClick={cleanOrderList}>
@@ -64,6 +66,16 @@ export const Basket: FC<BasketPropsType> = ({
           </>
         )}
       </List>
+      <div className={styles.returnWrapper}>
+        <Button
+          className={styles.return}
+          onClick={closeCart}
+          color="primary"
+          variant="contained"
+        >
+          вернуться на главную
+        </Button>
+      </div>
     </Drawer>
   );
 };

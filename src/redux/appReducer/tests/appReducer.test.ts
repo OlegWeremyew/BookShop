@@ -1,8 +1,7 @@
-import { appReducer } from '../appReducer';
-import { appAction } from '../appAction';
-import { InitialAppStateType } from '../types';
-import { EMPTY_STRING } from '../../../constants';
+import { EMPTY_STRING } from 'constants/variables';
 import { basketTest, goodsTest } from './testConstants';
+import { InitialAppStateType } from 'redux/appReducer/types';
+import { appAction, appReducer } from 'redux/appReducer';
 
 const startState: InitialAppStateType = {
   books: goodsTest,

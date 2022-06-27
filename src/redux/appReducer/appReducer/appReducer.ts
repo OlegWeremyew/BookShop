@@ -1,5 +1,8 @@
 import { ActionAppReducerType, InitialAppStateType } from '../types';
-import { goods } from '../data';
+
+import { EMPTY_STRING } from 'constants/variables';
+import { OrderType } from 'components/types';
+import { goods } from 'redux/appReducer/data';
 import {
   ADD_BOOK_IN_BASKET_LIST,
   CLEAN_BASKET_LIST,
@@ -9,9 +12,7 @@ import {
   SET_FILTER_VALUE,
   SET_HISTORY_FROM_SESSION_STORAGE,
   SET_SEARCH_LIST,
-} from '../constants';
-import { EMPTY_STRING } from '../../../constants';
-import { OrderType } from '../../../components/types';
+} from 'redux/appReducer/constants';
 
 export const initialAppState = {
   books: goods,

@@ -1,4 +1,4 @@
-import { OrderType } from '../../../../types';
+import { OrderType } from 'components/types';
 
 export type GoodsItemPropsType = {
   name: string;

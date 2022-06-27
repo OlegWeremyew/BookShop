@@ -1,7 +1,7 @@
-import { GoodsType } from '../data/types';
-import { InferActionTypes } from '../../types';
-import { appAction } from '../appAction';
-import { OrderType } from '../../../components/types';
+import { OrderType } from 'components/types';
+import { GoodsType } from 'redux/appReducer/data/types';
+import { InferActionTypes } from 'redux/types';
+import { appAction } from 'redux/appReducer';
 
 export type InitialAppStateType = {
   books: GoodsType[];

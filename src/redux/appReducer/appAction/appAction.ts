@@ -1,3 +1,4 @@
+import { OrderType } from 'components/types';
 import {
   ADD_BOOK_IN_BASKET_LIST,
   CLEAN_BASKET_LIST,
@@ -7,9 +8,8 @@ import {
   SET_FILTER_VALUE,
   SET_HISTORY_FROM_SESSION_STORAGE,
   SET_SEARCH_LIST,
-} from '../constants';
-import { GoodsType } from '../data/types';
-import { OrderType } from '../../../components/types';
+} from 'redux/appReducer/constants';
+import { GoodsType } from 'redux/appReducer/data/types';
 
 export const appAction = {
   setFilterValue(filter: string) {

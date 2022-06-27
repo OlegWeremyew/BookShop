@@ -1,5 +1,5 @@
-import { OrderType } from '../../../types';
-import { GoodsType } from '../../../../redux/appReducer/data/types';
+import { GoodsType } from 'redux/appReducer/data/types';
+import { OrderType } from 'components/types';
 
 export type GoodsListPropsType = {
   products: GoodsType[];

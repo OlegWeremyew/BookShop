@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getBasketListAppSelector } from '../../selectors/appSelectors';
-import { OrderType } from '../../components/types';
-import { appAction } from '../../redux/appReducer';
+import { getBasketListAppSelector } from 'selectors/appSelectors';
+import { OrderType } from 'components/types';
+import { appAction } from 'redux/appReducer';
 
 export const useGetHistoryList = (): OrderType[] => {
   const dispatch = useDispatch();

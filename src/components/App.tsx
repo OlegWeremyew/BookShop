@@ -1,5 +1,5 @@
 import { ChangeEvent, FC, useState } from 'react';
-import { EMPTY_STRING } from '../constants';
+import { EMPTY_STRING } from 'constants/variables';
 import { OrderType } from './types';
 import { Snack } from './Snack';
 import { Header } from './Header';
@@ -11,9 +11,9 @@ import {
   getAllBooksAppSelector,
   getSearchListAppSelector,
   getSearchValueAppSelector,
-} from '../selectors/appSelectors';
-import { appAction } from '../redux/appReducer';
-import { useGetHistoryList } from '../utils';
+} from 'selectors/appSelectors';
+import { appAction } from 'redux/appReducer';
+import { useGetHistoryList } from 'utils';
 import { MoveUp } from './MoveUp';
 
 export const App: FC = () => {
@@ -88,7 +88,7 @@ export const App: FC = () => {
           closeCart={() => setCartOpen(false)}
         />
         <Snack isOpen={isSnackOpen} handleClose={() => setSnackOpen(false)} />
-        <MoveUp />
+        {searchList.length > 6 && <MoveUp />}
       </div>
     </div>
   );

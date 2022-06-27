@@ -1,5 +1,5 @@
-import { GoodsType } from '../../data/types';
-import { OrderType } from '../../../../components/types';
+import { OrderType } from 'components/types';
+import { GoodsType } from 'redux/appReducer/data/types';
 
 export const goodsTest: GoodsType[] = [
   {

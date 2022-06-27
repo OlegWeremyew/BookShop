@@ -3,7 +3,7 @@ import { Close } from '@material-ui/icons';
 import React, { FC } from 'react';
 import { BasketItemPropsType } from './types';
 import { useDispatch } from 'react-redux';
-import { appAction } from '../../../redux/appReducer';
+import { appAction } from 'redux/appReducer';
 import styles from './BasketItem.module.scss';
 import { ChangeQuantityBlock } from './ChangeQuantityBlock';
 

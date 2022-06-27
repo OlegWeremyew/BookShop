@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styles from '../BasketItem.module.scss';
 import { Button, ButtonGroup } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
-import { appAction } from '../../../../redux/appReducer';
+import { appAction } from 'redux/appReducer';
 import { ChangeQuantityType } from './types';
 
 export const ChangeQuantityBlock: FC<ChangeQuantityType> = ({ id, quantity }) => {
